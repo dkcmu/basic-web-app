@@ -7,14 +7,13 @@ export default function QueryProcessor(query: string): string {
     );
   }
   else if (query.toLowerCase().includes("numbers is the largest:")) {
-    return (
-      "79"
-    );
+    var match = query.match(/[0-9]+/);
+    var max = (Math.max(Math.max(parseInt(match[1]), parseInt(match[2])), parseInt(match[3])))
+    return max.toString();
   }
   else if (query.toLowerCase().includes("plus")) {
-    return (
-      "89"
-    );
+    var match = query.match(/[0-9]+/);
+    return (parseInt(match[1]) + parseInt(match[2])).toString();
   }
 
   return "";
