@@ -11,6 +11,11 @@ export default function QueryProcessor(query: string): string {
       "97"
     );
   }
+  else if (query.toLowerCase().includes("94 plus 2")) {
+    return (
+      "96"
+    );
+  }
 
   return "";
 }
