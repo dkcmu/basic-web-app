@@ -21,6 +21,13 @@ export default function QueryProcessor(query: string): string {
     } 
     return (parseInt(match[1]) + parseInt(match[2])).toString();
   }
+  else if (query.toLowerCase().includes("multiplied")) {
+    var match = query.match(/[0-9]+/);
+    if (match === null) {
+      return "";
+    } 
+    return (parseInt(match[1]) * parseInt(match[2])).toString();
+  }
 
   return "";
 }
