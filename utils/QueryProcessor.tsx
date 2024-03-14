@@ -8,9 +8,7 @@ export default function QueryProcessor(query: string): string {
   }
   else if (query.toLowerCase().includes("name?")) {
     return (
-      "My name is Git Goon 1. Why am I Git Goon 1? Because I am the greatest. " +
-      "The greatest Git Goon there ever was, there is, and there will ever be. " +
-      "Long live me."
+      "Git Goon 1"
     );
   }
 
