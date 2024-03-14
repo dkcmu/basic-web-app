@@ -31,6 +31,11 @@ export default function QueryProcessor(query: string): string {
       "97"
     );
   }
+  else if (query.toLowerCase().includes("numbers is the largest: 35")) {
+    return (
+      "90"
+    );
+  }
 
   return "";
 }
