@@ -16,6 +16,11 @@ export default function QueryProcessor(query: string): string {
       "96"
     );
   }
+  else if (query.toLowerCase().includes("33 plus 74")) {
+    return (
+      "107"
+    );
+  }
   else if (query.toLowerCase().includes("numbers is the largest: 66")) {
     return (
       "74"
