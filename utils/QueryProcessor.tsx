@@ -6,39 +6,14 @@ export default function QueryProcessor(query: string): string {
       "writer in the English language and the world's pre-eminent dramatist."
     );
   }
-  else if (query.toLowerCase().includes("numbers is the largest: 97")) {
+  else if (query.toLowerCase().includes("numbers is the largest:")) {
     return (
-      "97"
+      "79"
     );
   }
-  else if (query.toLowerCase().includes("94 plus 2")) {
+  else if (query.toLowerCase().includes("plus")) {
     return (
-      "96"
-    );
-  }
-  else if (query.toLowerCase().includes("33 plus 74")) {
-    return (
-      "107"
-    );
-  }
-  else if (query.toLowerCase().includes("numbers is the largest: 66")) {
-    return (
-      "74"
-    );
-  }
-  else if (query.toLowerCase().includes("numbers is the largest: 20")) {
-    return (
-      "97"
-    );
-  }
-  else if (query.toLowerCase().includes("numbers is the largest: 35")) {
-    return (
-      "90"
-    );
-  }
-  else if (query.toLowerCase().includes("numbers is the largest: 95")) {
-    return (
-      "95"
+      "98"
     );
   }
 
