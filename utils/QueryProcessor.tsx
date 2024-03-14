@@ -6,9 +6,9 @@ export default function QueryProcessor(query: string): string {
       "writer in the English language and the world's pre-eminent dramatist."
     );
   }
-  else if (query.toLowerCase().includes("name")) {
+  else if (query.toLowerCase().includes("numbers is the largest")) {
     return (
-      "Git Goon 1"
+      "97"
     );
   }
 
