@@ -6,27 +6,43 @@ export default function QueryProcessor(query: string): string {
       "writer in the English language and the world's pre-eminent dramatist."
     );
   }
-  else if (query.toLowerCase().includes("numbers is the largest:")) {
-    var match = query.match(/[0-9]+/);
+  else if (query.toLowerCase().includes("largest")) {
+    var match = query.match(/\d+/g);
     if (match === null) {
       return "";
     } 
-    var max = (Math.max(Math.max(parseInt(match[1]), parseInt(match[2])), parseInt(match[3])))
+    var max = (Math.max(Math.max(parseInt(match[0]), parseInt(match[1])), parseInt(match[2])))
     return max.toString();
   }
   else if (query.toLowerCase().includes("plus")) {
-    var match = query.match(/[0-9]+/);
+    var match = query.match(/\d+/g);
     if (match === null) {
       return "";
     } 
-    return (parseInt(match[1]) + parseInt(match[2])).toString();
+    return (parseInt(match[0]) + parseInt(match[1])).toString();
   }
   else if (query.toLowerCase().includes("multiplied")) {
-    var match = query.match(/[0-9]+/);
+    var match = query.match(/\d+/g);
     if (match === null) {
       return "";
     } 
-    return (parseInt(match[1]) * parseInt(match[2])).toString();
+    return (parseInt(match[0]) * parseInt(match[1])).toString();
+  }
+  else if (query.toLowerCase().includes("both")) {
+    var match = query.match(/\d+/g);
+    if (match === null) {
+      return "";
+    }
+    
+    return (parseInt(match[0]) * parseInt(match[1])).toString();
+  }
+  else if (query.toLowerCase().includes("minus")) {
+    var match = query.match(/\d+/g);
+    if (match === null) {
+      return "";
+    }
+    
+    return (parseInt(match[0]) - parseInt(match[1])).toString();
   }
 
   return "";

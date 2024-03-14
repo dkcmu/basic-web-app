@@ -17,4 +17,12 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+
+    test('should return largest description', () => {
+        const query = "largest 4 5 6";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "6"
+          ));
+    });
 });
